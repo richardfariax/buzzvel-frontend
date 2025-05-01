@@ -15,7 +15,17 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Teach students worldwide
+          <span className="relative inline-block">
+            <span className="relative z-10">Teach</span>
+            <Image
+              src="/assets/underline.svg"
+              alt=""
+              width={200}
+              height={20}
+              className="absolute bottom-[-1px] left-0 w-full h-auto z-0"
+            />
+          </span>{" "}
+          students worldwide
         </motion.h1>
 
         <motion.p
