@@ -1,61 +1,114 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
+import { SliderCues } from "./SliderCues";
 
 export function SuccessStories() {
-  return (
-    <section className="bg-gray-100 py-20 px-6 lg:px-20 max-w-[1440px] mx-auto">
-      <motion.div
-        className="text-center mb-16"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="font-roboto font-bold text-[32px] lg:text-[48px] text-[#0F172A]">
-          Success Stories
-        </h2>
-        <p className="font-roboto font-normal text-[18px] lg:text-[22px] text-[#4B5563] mt-4">
-          Id urna, nisl, ut quam. Diam suspendisse fringilla quam arcu mattis
-          est velit in. Nibh in purus sit convallis phasellus ut. At vel erat
-          ultricies commodo. Neque suspendisse a habitasse commodo.
-        </p>
-      </motion.div>
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* Caso  de sucesso 1 */}
+  const stories = [
+    {
+      text: "Id urna, nisl, ut quam. Diam suspendisse fringilla quam arcu mattis est velit in. Nibh in purus sit convallis phasellus ut. At vel erat ultricies commodo. Neque suspendisse a habitasse commodo.",
+      name: "Marie Poirot",
+      company: "Bigapp",
+    },
+    {
+      text: "Pellentesque euismod scelerisque purus, ut viverra sapien tristique a. Proin at enim eros. Vivamus tristique euismod ultricies. Donec vehicula lorem vitae elit dignissim tempor.",
+      name: "John Doe",
+      company: "TechCorp",
+    },
+    {
+      text: "Curabitur cursus lorem nec massa auctor, sed egestas orci varius. Aenean egestas urna sed orci tristique, nec vehicula nisl venenatis. Nulla facilisi. Fusce eget risus nec arcu consequat tincidunt.",
+      name: "Alice Johnson",
+      company: "Innovative Solutions",
+    },
+  ];
+
+  const nextStory = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % stories.length);
+  };
+
+  const prevStory = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + stories.length) % stories.length
+    );
+  };
+
+  return (
+    <section className="relative w-screen bg-[#FACC15] py-36 my-20 px-6 lg:px-20 overflow-visible h-[580px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div
-          className="bg-white p-8 rounded-lg shadow-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <p className="font-roboto font-normal text-[18px] lg:text-[22px] text-[#0F172A]">
-            Building apps just got easier
-          </p>
-          <p className="font-roboto font-medium text-[20px] lg:text-[24px] text-[#2563EB] mt-4">
-            Marie Poirot,
-          </p>
-          <p className="font-roboto font-bold text-[18px] lg:text-[22px] text-[#0F172A]">
-            Bigapp
-          </p>
+          <div className="max-w-[528px] pr-6 pl-16">
+            <p className="font-roboto font-normal text-xxl lg:text-xl text-[#0F172A]">
+              {stories[currentIndex].text}
+            </p>
+            <p className="font-roboto font-normal text-xxl mt-8 lg:text-xl text-[#0F172A]">
+              {stories[currentIndex].name},
+            </p>
+            <p className="font-roboto font-bold text-xxl lg:text-xl text-[#0F172A]">
+              {stories[currentIndex].company}
+            </p>
+          </div>
         </motion.div>
+      </div>
 
-        <motion.div
-          className="bg-white p-8 rounded-lg shadow-lg"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
+      <div className="hidden lg:block absolute right-[150px] top-[30px] z-20">
+        <div
+          className="relative bg-[#0F172A] rounded-[50px]"
+          style={{
+            width: "495.63px",
+            height: "573.11px",
+            transform: "rotate(-30deg)",
+          }}
+        ></div>
+        <Image
+          src="/assets/image.png"
+          alt="image"
+          width={550}
+          height={450}
+          className="absolute bottom-28 -left-6"
+        />
+        <Image
+          src="/assets/dots.svg"
+          alt="dots"
+          width={150}
+          height={150}
+          className="absolute bottom-12 left-4"
+        />
+        <Image
+          src="/assets/marks.svg"
+          alt="marks"
+          width={60}
+          height={60}
+          className="absolute -top-4 right-2"
+        />
+      </div>
+
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-30 ml-8">
+        <button
+          onClick={prevStory}
+          className="text-[#0F172A] text-3xl font-bold hover:text-[#2563EB] transition-all"
         >
-          <p className="font-roboto font-normal text-[18px] lg:text-[22px] text-[#0F172A]">
-            Building apps just got easier
-          </p>
-          <p className="font-roboto font-medium text-[20px] lg:text-[24px] text-[#2563EB] mt-4">
-            John Doe,
-          </p>
-          <p className="font-roboto font-bold text-[18px] lg:text-[22px] text-[#0F172A]">
-            TechCorp
-          </p>
-        </motion.div>
+          <ChevronLeft color="white" size={50} />
+        </button>
+      </div>
+      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-30 mr-8">
+        <button
+          onClick={nextStory}
+          className="text-[#0F172A] text-3xl font-bold hover:text-[#2563EB] transition-all"
+        >
+          <ChevronRight color="black" size={50} />
+        </button>
+      </div>
+      <div className="absolute bottom-36 left-44 transform -translate-x-1/2 flex gap-2">
+        <SliderCues currentIndex={currentIndex} totalSlides={stories.length} />
       </div>
     </section>
   );
