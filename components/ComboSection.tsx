@@ -1,5 +1,6 @@
 import { AboutSection } from "./AboutSection";
 import { MeetSection } from "./MeetSection";
+import { ReportsSection } from "./ReportsSection";
 import { StatsSection } from "./StatsSection";
 import { SuccessStories } from "./SucessStories";
 
@@ -10,6 +11,7 @@ export function ComboSection() {
       <SuccessStories />
       <MeetSection />
       <StatsSection />
+      <ReportsSection />
     </>
   );
 }
