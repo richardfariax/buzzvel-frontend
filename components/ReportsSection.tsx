@@ -57,7 +57,7 @@ export const ReportsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50 w-full overflow-hidden">
+    <section className="py-16 w-full overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-8 px-4">
           <h2 className="text-5xl font-bold text-gray-800">

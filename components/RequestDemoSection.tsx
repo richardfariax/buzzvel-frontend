@@ -23,11 +23,11 @@ export function RequestDemoSection() {
         <h1 className="text-white text-5xl font-extrabold leading-tight">
           Ready for your next project?
         </h1>
-        <p className="text-white text-3xl font-light whitespace-nowrap">
-          Sit elit feugiat turpis sed integer integer accumsan turpis.
-        </p>
       </div>
 
+      <p className="w-full text-white text-3xl font-light text-center">
+        Sit elit feugiat turpis sed integer integer accumsan turpis.
+      </p>
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-lg flex flex-col items-center"

@@ -1,6 +1,5 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
-import { FeatureSection } from "@/components/FeatureSection";
 import { Footer } from "@/components/Footer";
 import { ComboSection } from "@/components/ComboSection";
 
@@ -10,7 +9,6 @@ export default function HomePage() {
       <Header />
       <HeroSection />
       <ComboSection />
-      <FeatureSection />
       <Footer />
     </main>
   );

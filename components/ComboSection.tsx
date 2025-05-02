@@ -1,4 +1,6 @@
 import { AboutSection } from "./AboutSection";
+import { FeaturesSection } from "./FeaturesSection";
+import { LearningInvitationSection } from "./LearningInvitationSection";
 import { MeetSection } from "./MeetSection";
 import { ReportsSection } from "./ReportsSection";
 import { RequestDemoSection } from "./RequestDemoSection";
@@ -13,6 +15,8 @@ export function ComboSection() {
       <MeetSection />
       <StatsSection />
       <ReportsSection />
+      <FeaturesSection />
+      <LearningInvitationSection />
       <RequestDemoSection />
     </>
   );
