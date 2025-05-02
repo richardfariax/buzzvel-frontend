@@ -43,9 +43,9 @@ export function AboutSection() {
               <Image
                 src="/assets/underline.svg"
                 alt=""
-                width={246}
-                height={12}
-                className="absolute bottom-[1px] left-0 w-[246px] h-[12px] z-0"
+                width={300}
+                height={30}
+                className="absolute -bottom-2 left-0 w-[300] h-[30px] z-0"
               />
             </span>{" "}
             app
