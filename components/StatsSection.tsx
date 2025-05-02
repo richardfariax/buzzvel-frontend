@@ -1,7 +1,8 @@
 import Image from "next/image";
+import type { StatsSection } from "@/types/StatsSection";
 
 export function StatsSection() {
-  const stats = [
+  const stats: StatsSection[] = [
     {
       icon: "/assets/heart.svg",
       label: "195",
@@ -22,7 +23,7 @@ export function StatsSection() {
   return (
     <section className="w-full bg-[#0F172A] flex flex-col justify-center items-center px-4 py-20 gap-20">
       <div className="flex flex-row gap-20 w-full max-w-screen-xl justify-center flex-wrap">
-        {stats.map((stat) => (
+        {stats.map((stat: StatsSection) => (
           <div
             key={stat.title}
             className="flex flex-col items-center w-[373.33px] h-[213px]"

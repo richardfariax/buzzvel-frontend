@@ -4,9 +4,10 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { AboutSectionHighlight } from "@/types/AboutSectionHighlight";
 
 export function AboutSection() {
-  const highlights = [
+  const highlights: AboutSectionHighlight[] = [
     {
       title: "The map of mathematics",
       description:
@@ -89,7 +90,7 @@ export function AboutSection() {
 
           <div className="absolute -bottom-[90px] right-[60px] px-2 py-4 rounded-xl z-20">
             <div className="flex gap-2 md:gap-4">
-              {highlights.map((item, index) => (
+              {highlights.map((item: AboutSectionHighlight, index: number) => (
                 <div
                   key={index}
                   className="flex flex-col px-4 pt-4 w-[220px] h-[232px] bg-white shadow-xl rounded-[10px]"

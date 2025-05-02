@@ -1,9 +1,6 @@
 "use client";
 
-interface SliderCuesProps {
-  currentIndex: number;
-  totalSlides: number;
-}
+import { SliderCuesProps } from "@/types/SliderCuesProps";
 
 export function SliderCues({ currentIndex, totalSlides }: SliderCuesProps) {
   return (

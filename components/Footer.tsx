@@ -1,7 +1,8 @@
+import { FooterLink } from "@/types/FooterLink";
 import { Accessibility, Euro, Globe } from "lucide-react";
 import Link from "next/link";
 
-const footerLinks = [
+const footerLinks: FooterLink[] = [
   {
     title: "Product",
     links: [
@@ -73,7 +74,7 @@ export function Footer() {
               />
             </svg>
           </div>
-          {footerLinks.map((section) => (
+          {footerLinks.map((section: FooterLink) => (
             <div key={section.title}>
               <h4 className="text-sm font-semibold mb-4">{section.title}</h4>
               <ul className="space-y-4">

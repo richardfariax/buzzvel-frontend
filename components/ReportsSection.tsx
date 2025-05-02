@@ -3,13 +3,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-
-type Report = {
-  name: string;
-  role: string;
-  content: string;
-  image: string;
-};
+import type { Report } from "@/types/Report";
 
 const reports: Report[] = [
   {
