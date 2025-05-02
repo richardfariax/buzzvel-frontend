@@ -1,26 +1,52 @@
-import { Globe, Euro, Accessibility } from "lucide-react";
+import { FooterLink } from "@/types/FooterLink";
+import { Accessibility, Euro, Globe } from "lucide-react";
 import Link from "next/link";
 
-const footerLinks = [
+const footerLinks: FooterLink[] = [
   {
     title: "Product",
-    links: ["Pricing", "Overview", "Browse", "Accessibility", "BETA"],
+    links: [
+      { label: "Pricing" },
+      { label: "Overview" },
+      { label: "Browse" },
+      { label: "Accessibility", tag: "BETA" },
+    ],
   },
   {
     title: "Solutions",
-    links: ["Brainstorming", "Ideation", "Wireframing", "Research"],
+    links: [
+      { label: "Brainstorming" },
+      { label: "Ideation" },
+      { label: "Wireframing" },
+      { label: "Research" },
+    ],
   },
   {
     title: "Resources",
-    links: ["Help Center", "Blog", "Tutorials", "FAQs"],
+    links: [
+      { label: "Help Center" },
+      { label: "Blog" },
+      { label: "Tutorials" },
+      { label: "FAQs" },
+    ],
   },
   {
     title: "Support",
-    links: ["Contact Us", "Developers", "Documentation", "Integrations"],
+    links: [
+      { label: "Contact Us" },
+      { label: "Developers" },
+      { label: "Documentation" },
+      { label: "Integrations" },
+    ],
   },
   {
     title: "Company",
-    links: ["About", "Press", "Events", "Request Demo"],
+    links: [
+      { label: "About" },
+      { label: "Press" },
+      { label: "Events" },
+      { label: "Request Demo" },
+    ],
   },
 ];
 
@@ -48,20 +74,22 @@ export function Footer() {
               />
             </svg>
           </div>
-
-          {footerLinks.map((section) => (
+          {footerLinks.map((section: FooterLink) => (
             <div key={section.title}>
-              <h4 className="text-sm font-semibold text-white mb-3">
-                {section.title}
-              </h4>
-              <ul className="space-y-2">
+              <h4 className="text-sm font-semibold mb-4">{section.title}</h4>
+              <ul className="space-y-4">
                 {section.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <Link
-                      href="/"
-                      className="text-sm text-white hover:opacity-80 transition"
+                      href="#"
+                      className="text-sm hover:underline flex items-center gap-2"
                     >
-                      {link}
+                      {link.label}
+                      {link.tag && (
+                        <span className="text-xs text-purple-600 bg-purple-100 px-1.5 py-0.5 rounded">
+                          {link.tag}
+                        </span>
+                      )}
                     </Link>
                   </li>
                 ))}

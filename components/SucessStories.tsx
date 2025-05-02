@@ -5,11 +5,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { SliderCues } from "./SliderCues";
+import { SuccessStoriesStory } from "@/types/SucessStoriesStory";
 
 export function SuccessStories() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const stories = [
+  const stories: SuccessStoriesStory[] = [
     {
       text: "Id urna, nisl, ut quam. Diam suspendisse fringilla quam arcu mattis est velit in. Nibh in purus sit convallis phasellus ut. At vel erat ultricies commodo. Neque suspendisse a habitasse commodo.",
       name: "Marie Poirot",

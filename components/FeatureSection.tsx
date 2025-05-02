@@ -1,6 +1,7 @@
+import { FeatureSectionLesson } from "@/types/FeatureSectionLesson";
 import Link from "next/link";
 
-const lessons = [
+const lessons: FeatureSectionLesson[] = [
   {
     title: "The map of mathematics",
     category: "Entertainment",
@@ -53,7 +54,7 @@ export function FeatureSection() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {lessons.map((lesson) => (
+          {lessons.map((lesson: FeatureSectionLesson) => (
             <div
               key={lesson.title}
               className="rounded-lg bg-white shadow-sm p-6 flex flex-col justify-between"
