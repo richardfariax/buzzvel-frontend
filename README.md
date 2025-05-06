@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Buzzvel 2025 Frontend Developer Test
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Este projeto foi desenvolvido como parte do teste técnico para desenvolvedores frontend da Buzzvel em 2025. O objetivo foi implementar uma interface web/mobile totalmente responsiva com base nos protótipos fornecidos no Figma.
+
+Tecnologias utilizadas:
+
+- **Next.js** (com suporte a SSG/SSR)
+- **Framer Motion** para animações
+- **SVGs** para todas as imagens e ícones
+
+---
+
+## Project Setup
+
+### Pré-requisitos
+
+- **Node.js** (>= 16.x)
+- **Yarn** (recomendado) ou **npm**
+
+### Instalação
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/richardfariax/buzzvel-frontend.git
+   cd buzzvel-frontend
+   ```
+
+2. Instale as dependências:
+
+   Com Yarn:
+   ```bash
+   yarn
+   ```
+
+   Ou com npm:
+   ```bash
+   npm install
+   ```
+
+3. Inicie o servidor de desenvolvimento:
+
+   Com Yarn:
+   ```bash
+   yarn dev
+   ```
+
+   Ou com npm:
+   ```bash
+   npm run dev
+   ```
+
+4. Acesse a aplicação em [http://localhost:3000](http://localhost:3000)
+
+---
+
+## Figma Design
+
+- [Figma Design URL](#)
+- Senha: `FETEST2025!`
+- **Protótipo:** [Ver Protótipo Web](#)
+
+---
+
+## Funcionalidades Implementadas
+
+### 💻 Design Responsivo
+
+- Layout adaptado para diferentes tamanhos de tela, com fidelidade ao Figma.
+
+### ✨ Animações com Framer Motion
+
+- Animações suaves e modernas usando apenas **Framer Motion**.
+- Efeitos aplicados: transições de entrada, fade-ins, revelações de texto.
+
+### 🔍 SEO
+
+- Estrutura semântica com tags apropriadas (`main`, `section`, `header`, etc).
+- Meta tags configuradas com `next/head`.
+
+### ⚡️ Performance
+
+- Aplicação leve e rápida, com:
+  - **Static Site Generation (SSG)**
+  - **Carregamento preguiçoso** (Lazy loading)
+  - Uso exclusivo de **SVGs otimizados** para imagens
+
+---
+
+## Scripts
+
+- `dev`: inicia o servidor de desenvolvimento
+- `build`: gera o build de produção
+- `start`: roda a aplicação em modo produção
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn dev       # Desenvolvimento
+yarn build     # Build de produção
+yarn start     # Inicia o servidor de produção
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Links Úteis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React](https://reactjs.org/)
+- [Figma Design](#)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto demonstra a implementação completa com foco em performance, responsividade, acessibilidade e fidelidade ao design original.
