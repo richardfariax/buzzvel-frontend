@@ -60,6 +60,7 @@ export function SuccessStories() {
         </motion.div>
       </div>
 
+      {/* Quadrado azul e imagens - Visíveis somente em desktop */}
       <div className="hidden lg:block absolute right-[150px] top-[30px] z-20">
         <div
           className="relative bg-[#0F172A] rounded-[50px]"
@@ -89,6 +90,39 @@ export function SuccessStories() {
           width={60}
           height={60}
           className="absolute -top-4 right-2"
+        />
+      </div>
+
+      {/* Quadrado azul e imagens - Visíveis somente em mobile */}
+      <div className="lg:hidden absolute top-[100%] left-0 transform translate-y-4 z-10 w-full">
+        <div
+          className="relative bg-[#0F172A] rounded-[50px] mx-auto"
+          style={{
+            width: "495.63px",
+            height: "573.11px",
+            transform: "rotate(-30deg)",
+          }}
+        ></div>
+        <Image
+          src="/assets/image.png"
+          alt="image"
+          width={550}
+          height={450}
+          className="absolute bottom-28 left-6 mx-auto"
+        />
+        <Image
+          src="/assets/dots.svg"
+          alt="dots"
+          width={150}
+          height={150}
+          className="absolute bottom-12 left-4 mx-auto"
+        />
+        <Image
+          src="/assets/marks.svg"
+          alt="marks"
+          width={60}
+          height={60}
+          className="absolute -top-4 left-4 mx-auto"
         />
       </div>
 

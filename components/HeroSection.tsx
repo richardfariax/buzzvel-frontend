@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
-    <section className="flex flex-row items-center p-20 gap-20 max-w-[1440px] mx-auto">
-      <div className="flex flex-col gap-8 flex-1 max-w-[575px] relative">
+    <section className="flex flex-col lg:flex-row items-center p-6 lg:p-20 gap-10 lg:gap-20 max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-8 flex-1 max-w-[575px] relative order-1 lg:order-0">
         <motion.h1
-          className="font-roboto font-extrabold text-[72px] leading-[1.1] text-[#0F172A]"
+          className="font-roboto font-extrabold text-[48px] lg:text-[72px] leading-[1.1] text-[#0F172A]"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -29,7 +29,7 @@ export function HeroSection() {
         </motion.h1>
 
         <motion.p
-          className="font-roboto font-normal text-[22px] leading-[1.6] text-[#0F172A]"
+          className="font-roboto font-normal text-[18px] lg:text-[22px] leading-[1.6] text-[#0F172A]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -39,10 +39,10 @@ export function HeroSection() {
           Nunc ipsum est pellentesque turpis ultricies.
         </motion.p>
 
-        <div className="flex flex-row items-center gap-8 mt-8">
+        <div className="flex flex-row items-center gap-6 lg:gap-8 mt-6 lg:mt-8">
           <Link
             href="/signup"
-            className="flex justify-center items-center w-[239px] h-[64px] bg-[#EA580C] border-2 border-[#EA580C] rounded-lg font-roboto font-bold text-[24px] leading-[1] text-white tracking-[0.5px]"
+            className="flex justify-center items-center w-[200px] lg:w-[239px] h-[56px] lg:h-[64px] bg-[#EA580C] border-2 border-[#EA580C] rounded-lg font-roboto font-bold text-[20px] lg:text-[24px] leading-[1] text-white tracking-[0.5px]"
           >
             Sign Up Now
           </Link>
@@ -75,7 +75,7 @@ export function HeroSection() {
       </div>
 
       <motion.div
-        className="flex-1 relative w-[624px] h-[544px] isolation-auto"
+        className="flex-1 relative w-full max-w-[624px] h-[344px] lg:h-[544px] order-2 lg:order-1"
         animate={{ y: [0, -10, 0] }}
         transition={{
           duration: 3,

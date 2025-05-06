@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 
 export function MeetSection() {
   return (
-    <section className="flex flex-row items-center px-20 py-4 gap-20 w-[1440px] mx-auto relative">
-      <div className="flex flex-row items-center gap-4 w-[600px] h-[651px]">
+    <section className="flex flex-col md:flex-row items-center px-6 md:px-20 py-10 gap-12 md:gap-20 w-full max-w-[1440px] mx-auto relative">
+      <div className="w-full md:w-[600px] h-auto md:h-[651px]">
         <Image
           src="/assets/meet.svg"
           alt="meet"
@@ -19,7 +19,7 @@ export function MeetSection() {
       </div>
 
       <motion.div
-        className="flex flex-col items-start gap-8 w-[600px]"
+        className="flex flex-col items-start gap-8 w-full md:w-[600px]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -30,15 +30,15 @@ export function MeetSection() {
             alt="plane"
             width={64}
             height={64}
-            className="absolute -top-12 right-24"
+            className="absolute -top-12 right-0 md:right-24"
           />
-          <h2 className="font-roboto font-extrabold text-[56px] text-[#0F172A] leading-[110%]">
+          <h2 className="font-roboto font-extrabold text-[36px] md:text-[56px] text-[#0F172A] leading-[110%]">
             Meet international
           </h2>
-          <h2 className="font-roboto font-extrabold text-[56px] text-[#0F172A] leading-[110%]">
+          <h2 className="font-roboto font-extrabold text-[36px] md:text-[56px] text-[#0F172A] leading-[110%]">
             students & teachers
           </h2>
-          <p className="font-roboto font-normal text-[20px] leading-[180%] text-[#0F172A]">
+          <p className="font-roboto text-[16px] md:text-[20px] leading-[180%] text-[#0F172A]">
             Morbi sit egestas dignissim pharetra, sed amet. Tempus justo
             senectus risus ac vel, velit, nunc. Eget commodo eget in aliquam
             facilisi facilisi nec magna hendrerit. Placerat ipsum sit tellus
@@ -47,7 +47,7 @@ export function MeetSection() {
         </div>
         <Link
           href="/explore"
-          className="inline-flex items-center justify-center text-[#2563EB] font-medium text-[20px] gap-2"
+          className="inline-flex items-center justify-center text-[#2563EB] font-medium text-[18px] md:text-[20px] gap-2"
         >
           Explore teachers and students <ArrowRight size={24} />
         </Link>
