@@ -7,27 +7,8 @@ import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
-    <section className="flex flex-col-reverse lg:flex-row items-center p-6 lg:p-20 gap-10 lg:gap-20 max-w-[1440px] mx-auto">
-      <motion.div
-        className="flex-1 relative w-full max-w-[624px] h-[344px] lg:h-[544px] order-1 lg:order-none"
-        animate={{ y: [0, -10, 0] }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          repeatType: "loop",
-        }}
-      >
-        <Image
-          src="/assets/hero.svg"
-          alt="hero-image"
-          width={624}
-          height={544}
-          className="w-full h-full object-cover"
-          priority
-        />
-      </motion.div>
-
-      <div className="flex flex-col gap-8 flex-1 max-w-[575px] relative order-2 lg:order-none">
+    <section className="flex flex-col lg:flex-row items-center p-6 lg:p-20 gap-10 lg:gap-20 max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-8 flex-1 max-w-[575px] relative order-1 lg:order-0">
         <motion.h1
           className="font-roboto font-extrabold text-[48px] lg:text-[72px] leading-[1.1] text-[#0F172A]"
           initial={{ opacity: 0, y: -20 }}
@@ -92,6 +73,25 @@ export function HeroSection() {
           />
         </motion.div>
       </div>
+
+      <motion.div
+        className="flex-1 relative w-full max-w-[624px] h-[344px] lg:h-[544px] order-2 lg:order-1"
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
+      >
+        <Image
+          src="/assets/hero.svg"
+          alt="hero-image"
+          width={624}
+          height={544}
+          className="w-full h-full object-cover"
+          priority
+        />
+      </motion.div>
     </section>
   );
 }
