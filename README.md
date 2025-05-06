@@ -56,14 +56,6 @@ Tecnologias utilizadas:
 
 ---
 
-## Figma Design
-
-- [Figma Design URL](#)
-- Senha: `FETEST2025!`
-- **Protótipo:** [Ver Protótipo Web](#)
-
----
-
 ## Funcionalidades Implementadas
 
 ### 💻 Design Responsivo
