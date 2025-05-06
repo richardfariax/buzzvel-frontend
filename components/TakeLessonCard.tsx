@@ -7,7 +7,7 @@ interface TakeLessonCardProps {
 
 export function TakeLessonCard({ item }: TakeLessonCardProps) {
   return (
-    <div className="flex flex-col px-4 pt-4 w-[220px] h-[232px] bg-white shadow-xl rounded-[10px]">
+    <div className="flex flex-col px-4 pt-4 w-full sm:w-[220px] h-[232px] bg-white shadow-xl rounded-[10px]">
       <span
         className={`inline-block mb-2 px-3 py-1 text-xs rounded ${item.tagColor}`}
       >
